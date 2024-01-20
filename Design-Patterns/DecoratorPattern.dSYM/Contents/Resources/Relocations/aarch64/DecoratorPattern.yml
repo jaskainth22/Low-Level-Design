@@ -1,0 +1,27 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jaskarankainth/LLD/LLD/Design-Patterns/DecoratorPattern'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000038D8, symSize: 0x104 }
+  - { offsetInCU: 0x4443, offset: 0x4443, size: 0x8, addend: 0x0, symName: __ZNSt3__14endlB7v160006IcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_, symObjAddr: 0x204, symBinAddr: 0x100003ADC, symSize: 0x58 }
+  - { offsetInCU: 0x4483, offset: 0x4483, size: 0x8, addend: 0x0, symName: __ZNSt3__19use_facetB7v160006INS_5ctypeIcEEEERKT_RKNS_6localeE, symObjAddr: 0x510, symBinAddr: 0x100003DE8, symSize: 0x2C }
+  - { offsetInCU: 0x6CFD, offset: 0x6CFD, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000038D8, symSize: 0x104 }
+  - { offsetInCU: 0x6DE9, offset: 0x6DE9, size: 0x8, addend: 0x0, symName: __ZN5DecafC1Ev, symObjAddr: 0x104, symBinAddr: 0x1000039DC, symSize: 0x2C }
+  - { offsetInCU: 0x6E57, offset: 0x6E57, size: 0x8, addend: 0x0, symName: __ZN8EspressoC1Ev, symObjAddr: 0x130, symBinAddr: 0x100003A08, symSize: 0x2C }
+  - { offsetInCU: 0x6F28, offset: 0x6F28, size: 0x8, addend: 0x0, symName: __ZN16CaramelDecoratorC1EP8Beverage, symObjAddr: 0x15C, symBinAddr: 0x100003A34, symSize: 0x34 }
+  - { offsetInCU: 0x6FA9, offset: 0x6FA9, size: 0x8, addend: 0x0, symName: __ZN16SoyMilkDecoratorC1EP8Beverage, symObjAddr: 0x190, symBinAddr: 0x100003A68, symSize: 0x34 }
+  - { offsetInCU: 0x6FDF, offset: 0x6FDF, size: 0x8, addend: 0x0, symName: __ZN5Decaf4costEv, symObjAddr: 0x1C4, symBinAddr: 0x100003A9C, symSize: 0x14 }
+  - { offsetInCU: 0x70B0, offset: 0x70B0, size: 0x8, addend: 0x0, symName: __ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsB7v160006EPFRS3_S4_E, symObjAddr: 0x1D8, symBinAddr: 0x100003AB0, symSize: 0x2C }
+  - { offsetInCU: 0x70E2, offset: 0x70E2, size: 0x8, addend: 0x0, symName: __ZN8Espresso4costEv, symObjAddr: 0x25C, symBinAddr: 0x100003B34, symSize: 0x14 }
+  - { offsetInCU: 0x7106, offset: 0x7106, size: 0x8, addend: 0x0, symName: __ZN16CaramelDecorator4costEv, symObjAddr: 0x270, symBinAddr: 0x100003B48, symSize: 0x28 }
+  - { offsetInCU: 0x712A, offset: 0x712A, size: 0x8, addend: 0x0, symName: __ZN16SoyMilkDecorator4costEv, symObjAddr: 0x298, symBinAddr: 0x100003B70, symSize: 0x28 }
+  - { offsetInCU: 0x714E, offset: 0x714E, size: 0x8, addend: 0x0, symName: __ZN5DecafC2Ev, symObjAddr: 0x2C0, symBinAddr: 0x100003B98, symSize: 0x44 }
+  - { offsetInCU: 0x7178, offset: 0x7178, size: 0x8, addend: 0x0, symName: __ZN8BeverageC2Ev, symObjAddr: 0x304, symBinAddr: 0x100003BDC, symSize: 0x24 }
+  - { offsetInCU: 0x71A2, offset: 0x71A2, size: 0x8, addend: 0x0, symName: __ZN8EspressoC2Ev, symObjAddr: 0x328, symBinAddr: 0x100003C00, symSize: 0x44 }
+  - { offsetInCU: 0x71CC, offset: 0x71CC, size: 0x8, addend: 0x0, symName: __ZN16CaramelDecoratorC2EP8Beverage, symObjAddr: 0x36C, symBinAddr: 0x100003C44, symSize: 0x4C }
+  - { offsetInCU: 0x7202, offset: 0x7202, size: 0x8, addend: 0x0, symName: __ZN14AddOnDecoratorC2EP8Beverage, symObjAddr: 0x3B8, symBinAddr: 0x100003C90, symSize: 0x50 }
+  - { offsetInCU: 0x7238, offset: 0x7238, size: 0x8, addend: 0x0, symName: __ZN14AddOnDecorator4costEv, symObjAddr: 0x408, symBinAddr: 0x100003CE0, symSize: 0x30 }
+  - { offsetInCU: 0x725C, offset: 0x725C, size: 0x8, addend: 0x0, symName: __ZN16SoyMilkDecoratorC2EP8Beverage, symObjAddr: 0x438, symBinAddr: 0x100003D10, symSize: 0x4C }
+  - { offsetInCU: 0x7292, offset: 0x7292, size: 0x8, addend: 0x0, symName: __ZNKSt3__19basic_iosIcNS_11char_traitsIcEEE5widenB7v160006Ec, symObjAddr: 0x484, symBinAddr: 0x100003D5C, symSize: 0x8C }
+  - { offsetInCU: 0x72FE, offset: 0x72FE, size: 0x8, addend: 0x0, symName: __ZNKSt3__15ctypeIcE5widenB7v160006Ec, symObjAddr: 0x53C, symBinAddr: 0x100003E14, symSize: 0x38 }
+...

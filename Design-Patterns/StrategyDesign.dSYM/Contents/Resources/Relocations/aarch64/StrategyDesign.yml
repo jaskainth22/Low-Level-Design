@@ -1,0 +1,24 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jaskarankainth/LLD/LLD/Design-Patterns/StrategyDesign'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x10000397C, symSize: 0xF0 }
+  - { offsetInCU: 0x4443, offset: 0x4443, size: 0x8, addend: 0x0, symName: __ZNSt3__14endlB7v160006IcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_, symObjAddr: 0x200, symBinAddr: 0x100003B7C, symSize: 0x58 }
+  - { offsetInCU: 0x4483, offset: 0x4483, size: 0x8, addend: 0x0, symName: __ZNSt3__19use_facetB7v160006INS_5ctypeIcEEEERKT_RKNS_6localeE, symObjAddr: 0x440, symBinAddr: 0x100003DBC, symSize: 0x2C }
+  - { offsetInCU: 0x6CFD, offset: 0x6CFD, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x10000397C, symSize: 0xF0 }
+  - { offsetInCU: 0x6DEE, offset: 0x6DEE, size: 0x8, addend: 0x0, symName: __ZN19ConcreteStrategyAddC1Ev, symObjAddr: 0xF0, symBinAddr: 0x100003A6C, symSize: 0x2C }
+  - { offsetInCU: 0x6E66, offset: 0x6E66, size: 0x8, addend: 0x0, symName: __ZN24ConcreteStrategySubtractC1Ev, symObjAddr: 0x11C, symBinAddr: 0x100003A98, symSize: 0x2C }
+  - { offsetInCU: 0x6EDE, offset: 0x6EDE, size: 0x8, addend: 0x0, symName: __ZN24ConcreteStrategyMultiplyC1Ev, symObjAddr: 0x148, symBinAddr: 0x100003AC4, symSize: 0x2C }
+  - { offsetInCU: 0x6F5F, offset: 0x6F5F, size: 0x8, addend: 0x0, symName: __ZN7Context11setStrategyEP17InterfaceStrategy, symObjAddr: 0x174, symBinAddr: 0x100003AF0, symSize: 0x20 }
+  - { offsetInCU: 0x6F91, offset: 0x6F91, size: 0x8, addend: 0x0, symName: __ZN7Context15executeStrategyEii, symObjAddr: 0x194, symBinAddr: 0x100003B10, symSize: 0x40 }
+  - { offsetInCU: 0x707E, offset: 0x707E, size: 0x8, addend: 0x0, symName: __ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsB7v160006EPFRS3_S4_E, symObjAddr: 0x1D4, symBinAddr: 0x100003B50, symSize: 0x2C }
+  - { offsetInCU: 0x70B0, offset: 0x70B0, size: 0x8, addend: 0x0, symName: __ZN19ConcreteStrategyAddC2Ev, symObjAddr: 0x258, symBinAddr: 0x100003BD4, symSize: 0x44 }
+  - { offsetInCU: 0x70DA, offset: 0x70DA, size: 0x8, addend: 0x0, symName: __ZN17InterfaceStrategyC2Ev, symObjAddr: 0x29C, symBinAddr: 0x100003C18, symSize: 0x24 }
+  - { offsetInCU: 0x7104, offset: 0x7104, size: 0x8, addend: 0x0, symName: __ZN19ConcreteStrategyAdd7executeEii, symObjAddr: 0x2C0, symBinAddr: 0x100003C3C, symSize: 0x24 }
+  - { offsetInCU: 0x7144, offset: 0x7144, size: 0x8, addend: 0x0, symName: __ZN24ConcreteStrategySubtractC2Ev, symObjAddr: 0x2E4, symBinAddr: 0x100003C60, symSize: 0x44 }
+  - { offsetInCU: 0x716E, offset: 0x716E, size: 0x8, addend: 0x0, symName: __ZN24ConcreteStrategySubtract7executeEii, symObjAddr: 0x328, symBinAddr: 0x100003CA4, symSize: 0x24 }
+  - { offsetInCU: 0x71AE, offset: 0x71AE, size: 0x8, addend: 0x0, symName: __ZN24ConcreteStrategyMultiplyC2Ev, symObjAddr: 0x34C, symBinAddr: 0x100003CC8, symSize: 0x44 }
+  - { offsetInCU: 0x71D8, offset: 0x71D8, size: 0x8, addend: 0x0, symName: __ZN24ConcreteStrategyMultiply7executeEii, symObjAddr: 0x390, symBinAddr: 0x100003D0C, symSize: 0x24 }
+  - { offsetInCU: 0x7218, offset: 0x7218, size: 0x8, addend: 0x0, symName: __ZNKSt3__19basic_iosIcNS_11char_traitsIcEEE5widenB7v160006Ec, symObjAddr: 0x3B4, symBinAddr: 0x100003D30, symSize: 0x8C }
+  - { offsetInCU: 0x7284, offset: 0x7284, size: 0x8, addend: 0x0, symName: __ZNKSt3__15ctypeIcE5widenB7v160006Ec, symObjAddr: 0x46C, symBinAddr: 0x100003DE8, symSize: 0x38 }
+...
