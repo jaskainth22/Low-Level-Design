@@ -1,0 +1,168 @@
+public class Vehicle
+{
+    private VehicleType vehicleType;
+    private string vehicleNumber;
+
+    public Vehicle(VehicleType type, string vehicleNumber) {
+        this.vehicleType = type;
+        this.vehicleNumber = vehicleNumber;
+    }
+
+    public VehicleType getVehicleType() {
+        return vehicleType;
+    }
+
+    public string getVehicleNumber() {
+        return vehicleNumber;
+    }
+}
+
+public enum VehicleType {
+    COMPACT,
+    REGULAR,
+    LARGE
+}
+
+public class Spot {
+    private bool isAvailable;
+    private Vehicle vehicle; // Vehicle stored in this Spot
+    private VehicleType type;
+    private string spotId; 
+
+    public Spot(VehicleType type, string spotId) {
+        this.type = type;
+        this.isAvailable = true;
+        this.vehicle = null;
+        this.spotId = spotId;
+    }
+
+    public bool isSpotAvailable() {
+        return isAvailable;
+    }
+
+    public void setSpotAvailable(bool x) {
+        isAvailable = x;
+    }
+
+    public void parkVehicleAtSpot(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
+
+    public void releaseVehicle() {
+        this.vehicle = null;
+    }
+
+    public Vehicle getParkedVehicle() {
+        return this.vehicle;
+    }
+
+    public VehicleType getVehicleType() {
+        return this.type;
+    }
+}
+
+public class SpotType {
+    private List<Spot> spots;
+    private VehicleType type;
+    private int totalSpots;
+    private int availableSpots;
+
+    public SpotType(VehicleType type, int totalSpots) {
+        this.type = type;
+        this.totalSpots = totalSpots;
+        this.availableSpots = totalSpots;
+        this.spots = new List<Spot>();
+    }
+
+    public int getAvailableSpots() {
+        return availableSpots;
+    }
+
+    public void decrementAS() {
+        availableSpots--;
+    }
+
+    public void incrementAS() {
+        availableSpots++;
+    }
+}
+
+public class Transaction {
+    private Spot spot;
+    private Vehicle vehicle;
+    private SpotType spotType;
+
+    public Transaction(Spot spot, Vehicle vehicle, SpotType type) {
+        this.spot = spot;
+        this.vehicle = vehicle;
+        this.spotType = type;
+    }
+
+    public Spot getSpot() { return spot; }
+
+    public Vehicle getVehicle() { return vehicle; }
+
+    public SpotType getSpotType() { return spotType; }
+}
+
+public interface IParking {
+    bool ParkVehicle(Vehicle vehicle);
+    bool RemoveVehicle(Vehicle vehicle);
+    int parkingFees(Vehicle vehicle);
+    bool isParkingAvailable(VehicleType type);
+    List<int> showAvailableSpots();
+}
+
+public class Parking {
+    private List<SpotType> parkingSpots;
+    private Dictionary<Vehicle, Transaction> transactions;
+
+    public Parking() {
+        parkingSpots = new List<SpotType>();
+        transactions = new List<Transaction>();
+    }
+
+    public bool ParkVehicle(Vehicle vehicle) {
+        // Check if parking is available for this VehicleType;
+        foreach (var spotType in parkingSpots) {
+            if (spotType.type == vehicle.vehicleType) {
+                if (spotType.getAvailableSpots() == 0)
+                    return false;
+                
+                // Go thorugh the available spots and get the one that is free
+                foreach (var spot in spotType.spots) {
+                    if (spot.isAvailable) {
+                        // Book this spot;
+                        spot.parkVehicleAtSpot(vehicle);
+                        spot.setSpotAvailable(false);
+                        spotType.decrementAS();
+
+                        // Create a Transaction
+                        Transaction t = new Transaction (spot, vehicle, spotType);
+                        transactions.Add(vehicle, t);
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    public bool RemoveVehicle(Vehicle vehicle) {
+        // Check if this vehicle is stored or not
+        if (!transactions.ContainsKey(vehicle))
+            return false;
+        
+        Transaction t = transactions[vehicle];
+
+        // Remove this vehicle from the Spot
+        // Release the Spot
+        // Increase the Total count
+        t.getSpot().releaseVehicle();
+        t.getSpot().setSpotAvailable(true);
+        t.getSpotType().incrementAS();
+
+        return true;
+    }
+}
+
